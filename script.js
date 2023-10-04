@@ -8,21 +8,21 @@ document.addEventListener("DOMContentLoaded", function()
     const userUsersAccess = document.getElementById("usersAccess").value;
     const userResolutionType = document.getElementById("resolutionType").value;
 
-    const signIn = new SignIn(userName, userEmail, userpaymentMethod, userSubsType, userUsersAccess, userResolutionType);
+    const signUp = new SignUp(userName, userEmail, userpaymentMethod, userSubsType, userUsersAccess, userResolutionType);
     
     // Just here to test the outputs to see if it is working
     document.addEventListener("click", function() 
     {
-        console.log(signIn.name);
-        console.log(signIn.email);
-        console.log(signIn.userpaymentMethod);
-        console.log(signIn.userSubsType);
-        console.log(signIn.userUsersAccess);
-        console.log(signIn.userResolutionType);
+        console.log(signUp.name);
+        console.log(signUp.email);
+        console.log(signUp.userpaymentMethod);
+        console.log(signUp.userSubsType);
+        console.log(signUp.userUsersAccess);
+        console.log(signUp.userResolutionType);
     });
 });
 
-class SignIn
+class SignUp
 {
     _name;
     _email;
