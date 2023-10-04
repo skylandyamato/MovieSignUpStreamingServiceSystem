@@ -41,14 +41,27 @@ class SignUp
         this.resolutionType = resolutionType;
     }
 
-    set name(value)
-    {
-        this._name = value;
-    }
-    get name()
-    {
-        return this._name;
-    }
+    const myObject = {
+        _name: '',
+      
+        set name(value) {
+          if (!value.trim()) {
+            console.error('Name cannot be empty.');
+            return;
+          }
+      
+          this._name = value.trim();
+        },
+      
+        get name() {
+          return this._name;
+        },
+      };
+      
+      myObject.name = 'John';
+      myObject.name = '';
+      console.log('Name:', myObject.name);
+      
 
     set email(value)
     {
